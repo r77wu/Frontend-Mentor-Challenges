@@ -1,0 +1,127 @@
+@import url("https://fonts.google.com/specimen/Lexend+Deca");
+@import url("https://fonts.google.com/specimen/Big+Shoulders+Display");
+
+:root {
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 15px;
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(0, 0%, 95%);
+  color: hsla(0, 0%, 100%, 0.75);
+}
+
+.container {
+  width: 900px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1em 0;
+}
+
+.card {
+  width: 300px;
+  height: 450px;
+}
+
+.card > img,
+.card > h1,
+.card > p {
+  padding: 25px;
+}
+
+.card > h1 {
+  text-transform: uppercase;
+}
+
+.card > a {
+  display: flex;
+  width: 125px;
+  height: 40px;
+  margin: 25px;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid white;
+  border-radius: 20px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.sedanContainer {
+  background-color: var(--bright-orange);
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.sedanContainer > a {
+  color: var(--bright-orange);
+}
+
+.sedanContainer > a:active {
+  background-color: var(--bright-orange);
+}
+
+.SUVContainer {
+  background-color: var(--dark-cyan);
+}
+
+.SUVContainer > a {
+  color: var(--dark-cyan);
+}
+
+.SUVContainer > a:active {
+  background-color: var(--dark-cyan);
+}
+
+.luxuryContainer {
+  background-color: var(--very-dark-cyan);
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.luxuryContainer > a {
+  color: var(--very-dark-cyan);
+}
+
+.luxuryContainer > a:active {
+  background-color: var(--very-dark-cyan);
+}
+
+.card > a:active {
+  color: white;
+  cursor: pointer;
+}
+
+@media all and (max-width: 375px) {
+  .container {
+    width: 350px;
+    flex-direction: column;
+  }
+  .sedanContainer {
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 0;
+  }
+  .luxuryContainer {
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 10px;
+  }
+}
+
+.attribution {
+  color: black;
+}
