@@ -1,0 +1,240 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
+$colors: (
+  "Very Light Gray": hsl(0, 0%, 98%),
+  "Very Light Grayish Blue": hsl(236, 33%, 92%),
+  "Light Grayish Blue": hsl(233, 11%, 84%),
+  "Dark Grayish Blue": hsl(236, 9%, 61%),
+  "Very Dark Grayish Blue": hsl(235, 19%, 35%),
+);
+
+@mixin for-desktop {
+  @media all and (min-width: 1440px) {
+    @content;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  background-color: map-get($colors, "Very Light Grayish Blue");
+  color: map-get($colors, "Very Light Gray");
+}
+
+header {
+  background: url("./images/bg-mobile-light.jpg") no-repeat center center;
+  height: 200px;
+  @include for-desktop() {
+    background: url("./images/bg-desktop-light.jpg") no-repeat center center;
+    height: 300px;
+  }
+  .nav {
+    width: 80%;
+    padding-block: 2rem;
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include for-desktop() {
+      width: 40%;
+      padding: 5rem 0 3rem 0;
+      margin-inline: auto;
+    }
+    > .themeSelecter {
+      cursor: pointer;
+    }
+
+    h1 {
+      font-size: 24px;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+    }
+    .hiddenIron {
+      display: none;
+    }
+  }
+
+  .searchArea {
+    width: 80%;
+    height: 2rem;
+    margin-inline: auto;
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 5px;
+    @include for-desktop() {
+      width: 40%;
+      margin-inline: auto;
+      height: 3rem;
+    }
+    .checkBox {
+      flex: 0 0 2rem;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @include for-desktop() {
+        flex: 0 0 3rem;
+      }
+      .checkCircle {
+        width: 70%;
+        height: 70%;
+        border-radius: 50%;
+        border: 1px solid map-get($colors, "Light Grayish Blue");
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include for-desktop() {
+          width: 50%;
+          height: 50%;
+        }
+      }
+      .checkCircle.completed {
+        background: url("./images/icon-check.svg") no-repeat center,
+          linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+      }
+    }
+    .inputBox {
+      flex: 1 1 auto;
+      height: 100%;
+      .inputForm {
+        height: 100%;
+        input {
+          width: 100%;
+          height: 100%;
+          padding: 0.5rem;
+          border: none;
+          border-top-right-radius: 5px;
+          border-bottom-right-radius: 5px;
+        }
+      }
+    }
+  }
+}
+
+.section-toDoList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.listContainer {
+  width: 80%;
+  margin-top: -2rem;
+  background-color: #ffffff;
+  border-radius: 5px;
+  @include for-desktop() {
+    width: 40%;
+    margin-inline: auto;
+  }
+  .bottomBar {
+    width: 90%;
+    margin-block: 1rem;
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: map-get($colors, "Dark Grayish Blue");
+    font-size: 14px;
+  }
+  .toDoList {
+    width: 100%;
+    color: map-get($colors, "Dark Grayish Blue");
+    font-size: 16px;
+
+    .toDoItem {
+      width: 100%;
+      display: flex;
+      height: 4rem;
+      align-items: center;
+      border-bottom: 1px solid map-get($colors, "Dark Grayish Blue");
+      padding: 1rem;
+      .checkBox {
+        flex: 0 0 2rem;
+        height: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include for-desktop() {
+          flex: 0 0 3rem;
+          height: 3rem;
+        }
+        .checkCircle {
+          width: 70%;
+          height: 70%;
+          border-radius: 50%;
+          border: 1px solid map-get($colors, "Light Grayish Blue");
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          @include for-desktop() {
+            width: 50%;
+            height: 50%;
+          }
+        }
+        .checkCircle.completed {
+          background: url("./images/icon-check.svg") no-repeat center,
+            linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+        }
+      }
+      .inputBox {
+        flex: 1 1 auto;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        > p {
+          margin-left: 2rem;
+        }
+      }
+      .deleteBox {
+        flex: 0 0 2rem;
+        height: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+}
+
+.desktopStatus {
+  display: none;
+  @include for-desktop() {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    font-size: 16px;
+    color: map-get($colors, "Dark Grayish Blue");
+  }
+  .active {
+    color: hsl(220, 98%, 61%);
+  }
+}
+
+.mobileStatus {
+  width: 80%;
+  height: 3rem;
+  background-color: #ffffff;
+  border-radius: 5px;
+  margin-block: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  font-size: 16px;
+  color: map-get($colors, "Dark Grayish Blue");
+  @include for-desktop() {
+    display: none;
+  }
+  .active {
+    color: hsl(220, 98%, 61%);
+  }
+}

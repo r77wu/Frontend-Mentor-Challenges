@@ -1,0 +1,364 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  background-color: #e4e5f1;
+  color: #fafafa;
+}
+
+header {
+  background: url("./images/bg-mobile-light.jpg") no-repeat center center;
+  height: 200px;
+}
+
+@media all and (min-width: 1440px) {
+  header {
+    background: url("./images/bg-desktop-light.jpg") no-repeat center center;
+    height: 300px;
+  }
+}
+
+header .nav {
+  width: 80%;
+  padding-block: 2rem;
+  margin-inline: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media all and (min-width: 1440px) {
+  header .nav {
+    width: 40%;
+    padding: 5rem 0 3rem 0;
+    margin-inline: auto;
+  }
+}
+
+header .nav > .themeSelecter {
+  cursor: pointer;
+}
+
+header .nav h1 {
+  font-size: 24px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+header .nav .hiddenIron {
+  display: none;
+}
+
+header .searchArea {
+  width: 80%;
+  height: 2rem;
+  margin-inline: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #ffffff;
+  border-radius: 5px;
+}
+
+@media all and (min-width: 1440px) {
+  header .searchArea {
+    width: 40%;
+    margin-inline: auto;
+    height: 3rem;
+  }
+}
+
+header .searchArea .checkBox {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 2rem;
+          flex: 0 0 2rem;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media all and (min-width: 1440px) {
+  header .searchArea .checkBox {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 3rem;
+            flex: 0 0 3rem;
+  }
+}
+
+header .searchArea .checkBox .checkCircle {
+  width: 70%;
+  height: 70%;
+  border-radius: 50%;
+  border: 1px solid #d2d3db;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media all and (min-width: 1440px) {
+  header .searchArea .checkBox .checkCircle {
+    width: 50%;
+    height: 50%;
+  }
+}
+
+header .searchArea .checkBox .checkCircle.completed {
+  background: url("./images/icon-check.svg") no-repeat center, -webkit-gradient(linear, left top, left bottom, from(#57ddff), to(#c058f3));
+  background: url("./images/icon-check.svg") no-repeat center, linear-gradient(#57ddff, #c058f3);
+}
+
+header .searchArea .inputBox {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  height: 100%;
+}
+
+header .searchArea .inputBox .inputForm {
+  height: 100%;
+}
+
+header .searchArea .inputBox .inputForm input {
+  width: 100%;
+  height: 100%;
+  padding: 0.5rem;
+  border: none;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.section-toDoList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.listContainer {
+  width: 80%;
+  margin-top: -2rem;
+  background-color: #ffffff;
+  border-radius: 5px;
+}
+
+@media all and (min-width: 1440px) {
+  .listContainer {
+    width: 40%;
+    margin-inline: auto;
+  }
+}
+
+.listContainer .bottomBar {
+  width: 90%;
+  margin-block: 1rem;
+  margin-inline: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #9394a5;
+  font-size: 14px;
+}
+
+.listContainer .toDoList {
+  width: 100%;
+  color: #9394a5;
+  font-size: 16px;
+}
+
+.listContainer .toDoList .toDoItem {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 4rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px solid #9394a5;
+  padding: 1rem;
+}
+
+.listContainer .toDoList .toDoItem .checkBox {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 2rem;
+          flex: 0 0 2rem;
+  height: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media all and (min-width: 1440px) {
+  .listContainer .toDoList .toDoItem .checkBox {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 3rem;
+            flex: 0 0 3rem;
+    height: 3rem;
+  }
+}
+
+.listContainer .toDoList .toDoItem .checkBox .checkCircle {
+  width: 70%;
+  height: 70%;
+  border-radius: 50%;
+  border: 1px solid #d2d3db;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media all and (min-width: 1440px) {
+  .listContainer .toDoList .toDoItem .checkBox .checkCircle {
+    width: 50%;
+    height: 50%;
+  }
+}
+
+.listContainer .toDoList .toDoItem .checkBox .checkCircle.completed {
+  background: url("./images/icon-check.svg") no-repeat center, -webkit-gradient(linear, left top, left bottom, from(#57ddff), to(#c058f3));
+  background: url("./images/icon-check.svg") no-repeat center, linear-gradient(#57ddff, #c058f3);
+}
+
+.listContainer .toDoList .toDoItem .inputBox {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.listContainer .toDoList .toDoItem .inputBox > p {
+  margin-left: 2rem;
+}
+
+.listContainer .toDoList .toDoItem .deleteBox {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 2rem;
+          flex: 0 0 2rem;
+  height: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.desktopStatus {
+  display: none;
+}
+
+@media all and (min-width: 1440px) {
+  .desktopStatus {
+    background-color: #ffffff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 1rem;
+    font-size: 16px;
+    color: #9394a5;
+  }
+}
+
+.desktopStatus .active {
+  color: #3a7bfd;
+}
+
+.mobileStatus {
+  width: 80%;
+  height: 3rem;
+  background-color: #ffffff;
+  border-radius: 5px;
+  margin-block: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+  font-size: 16px;
+  color: #9394a5;
+}
+
+@media all and (min-width: 1440px) {
+  .mobileStatus {
+    display: none;
+  }
+}
+
+.mobileStatus .active {
+  color: #3a7bfd;
+}
+/*# sourceMappingURL=styles.css.map */
