@@ -1,0 +1,238 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap");
+
+@mixin option-base($position) {
+  width: 6rem;
+  height: 6rem;
+  position: $position;
+  background-color: #ffffff;
+  box-shadow: 0px -8px 10px #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+@mixin option-detail($color1, $color2) {
+  content: "";
+  position: absolute;
+  width: 8rem;
+  height: 8rem;
+  background: linear-gradient(to bottom, $color1, $color2);
+  border-radius: 50%;
+  z-index: -1;
+}
+
+@mixin step-base {
+  width: 305px;
+  height: 277px;
+  margin-inline: auto;
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+}
+
+@mixin step-2-3 {
+  @content;
+  @include step-base();
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    > .option {
+      @include option-base(static);
+    }
+    .paper::before {
+      @include option-detail(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+    }
+    .scissors::before {
+      @include option-detail(hsl(39, 89%, 49%), hsl(40, 84%, 53%));
+    }
+    .rock::before {
+      @include option-detail(hsl(349, 71%, 52%), hsl(349, 70%, 56%));
+    }
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 600;
+  background: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+  width: 100vw;
+  height: 100vh;
+  color: #ffffff;
+  overflow: hidden;
+}
+
+.countContainer {
+  width: 80%;
+  margin-inline: auto;
+  margin-block: 2rem;
+  padding: 1rem;
+  border: hsl(217, 16%, 45%) 2px solid;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 1px 1px 2px hsl(217, 16%, 45%);
+  border-radius: 5px;
+  > .title {
+    flex-basis: 30%;
+    > img {
+      max-width: 100%;
+    }
+  }
+  > .counter {
+    background-color: #ffffff;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    > .counterTitle {
+      color: hsl(229, 64%, 46%);
+      font-size: 12px;
+    }
+    > .count {
+      color: hsl(229, 25%, 31%);
+      font-size: 36px;
+      font-family: 700;
+    }
+  }
+}
+
+.step-1 {
+  @include step-base();
+  position: relative;
+  > .option {
+    @include option-base(absolute);
+  }
+  .paper {
+    top: -10px;
+    left: -8px;
+  }
+  .paper::before {
+    @include option-detail(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+  }
+  .scissors {
+    top: -10px;
+    right: -8px;
+  }
+  .scissors::before {
+    @include option-detail(hsl(39, 89%, 49%), hsl(40, 84%, 53%));
+  }
+  .rock {
+    bottom: 0;
+    left: 35%;
+  }
+  .rock::before {
+    @include option-detail(hsl(349, 71%, 52%), hsl(349, 70%, 56%));
+  }
+}
+
+.step-2 {
+  @include step-2-3();
+  .waiting {
+    @include option-base(static);
+    background-color: hsl(237, 49%, 15%);
+    box-shadow: none;
+  }
+}
+
+.step-3 {
+  @include step-2-3();
+}
+
+.step-4 {
+  @include step-2-3();
+  .you::after {
+    content: "";
+    display: block;
+    width: 12rem;
+    height: 12rem;
+    position: absolute;
+    border-radius: 50%;
+    z-index: -2;
+    background-image: radial-gradient(
+      circle,
+      rgba(31, 55, 86, 0.5) 50%,
+      rgba(238, 238, 238, 0.3) 80%,
+      rgba(221, 221, 221, 1) 100%
+    );
+  }
+}
+
+.result {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  .winLose {
+    font-size: 40px;
+    letter-spacing: 5px;
+  }
+  button {
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+    border: #ffffff;
+    font-weight: 700;
+    font-size: 16px;
+    color: hsl(229, 25%, 31%);
+    background-color: #ffffff;
+    cursor: pointer;
+  }
+  button:hover {
+    color: hsl(349, 70%, 56%);
+  }
+}
+
+.ruleContainer {
+  margin-block: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .ruleBtn {
+    width: 100px;
+    height: 50px;
+    border-radius: 5px;
+    background-color: transparent;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  .rules {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #ffffff;
+    color: black;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 36px;
+    img {
+      max-width: 100%;
+    }
+    .closeRules {
+      cursor: pointer;
+    }
+  }
+}

@@ -1,0 +1,542 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 600;
+  background: radial-gradient(#1f3756, #141539);
+  width: 100vw;
+  height: 100vh;
+  color: #ffffff;
+  overflow: hidden;
+}
+
+.countContainer {
+  width: 80%;
+  margin-inline: auto;
+  margin-block: 2rem;
+  padding: 1rem;
+  border: #606e85 2px solid;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-shadow: 1px 1px 2px #606e85;
+          box-shadow: 1px 1px 2px #606e85;
+  border-radius: 5px;
+}
+
+.countContainer > .title {
+  -ms-flex-preferred-size: 30%;
+      flex-basis: 30%;
+}
+
+.countContainer > .title > img {
+  max-width: 100%;
+}
+
+.countContainer > .counter {
+  background-color: #ffffff;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.countContainer > .counter > .counterTitle {
+  color: #2a46c0;
+  font-size: 12px;
+}
+
+.countContainer > .counter > .count {
+  color: #3b4363;
+  font-size: 36px;
+  font-family: 700;
+}
+
+.step-1 {
+  width: 305px;
+  height: 277px;
+  margin-inline: auto;
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.step-1 > .option {
+  width: 6rem;
+  height: 6rem;
+  position: absolute;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0px -8px 10px #ddd;
+          box-shadow: 0px -8px 10px #ddd;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.step-1 .paper {
+  top: -10px;
+  left: -8px;
+}
+
+.step-1 .paper::before {
+  content: "";
+  position: absolute;
+  width: 8rem;
+  height: 8rem;
+  background: -webkit-gradient(linear, left top, left bottom, from(#4865f4), to(#5671f5));
+  background: linear-gradient(to bottom, #4865f4, #5671f5);
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.step-1 .scissors {
+  top: -10px;
+  right: -8px;
+}
+
+.step-1 .scissors::before {
+  content: "";
+  position: absolute;
+  width: 8rem;
+  height: 8rem;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ec9e0e), to(#eca922));
+  background: linear-gradient(to bottom, #ec9e0e, #eca922);
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.step-1 .rock {
+  bottom: 0;
+  left: 35%;
+}
+
+.step-1 .rock::before {
+  content: "";
+  position: absolute;
+  width: 8rem;
+  height: 8rem;
+  background: -webkit-gradient(linear, left top, left bottom, from(#dc2e4e), to(#dd405d));
+  background: linear-gradient(to bottom, #dc2e4e, #dd405d);
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.step-2 {
+  width: 305px;
+  height: 277px;
+  margin-inline: auto;
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.step-2 > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2rem;
+}
+
+.step-2 > div > .option {
+  width: 6rem;
+  height: 6rem;
+  position: static;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0px -8px 10px #ddd;
+          box-shadow: 0px -8px 10px #ddd;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.step-2 > div .paper::before {
+  content: "";
+  position: absolute;
+  width: 8rem;
+  height: 8rem;
+  background: -webkit-gradient(linear, left top, left bottom, from(#4865f4), to(#5671f5));
+  background: linear-gradient(to bottom, #4865f4, #5671f5);
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.step-2 > div .scissors::before {
+  content: "";
+  position: absolute;
+  width: 8rem;
+  height: 8rem;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ec9e0e), to(#eca922));
+  background: linear-gradient(to bottom, #ec9e0e, #eca922);
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.step-2 > div .rock::before {
+  content: "";
+  position: absolute;
+  width: 8rem;
+  height: 8rem;
+  background: -webkit-gradient(linear, left top, left bottom, from(#dc2e4e), to(#dd405d));
+  background: linear-gradient(to bottom, #dc2e4e, #dd405d);
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.step-2 .waiting {
+  width: 6rem;
+  height: 6rem;
+  position: static;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0px -8px 10px #ddd;
+          box-shadow: 0px -8px 10px #ddd;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: #141539;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.step-3 {
+  width: 305px;
+  height: 277px;
+  margin-inline: auto;
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.step-3 > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2rem;
+}
+
+.step-3 > div > .option {
+  width: 6rem;
+  height: 6rem;
+  position: static;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0px -8px 10px #ddd;
+          box-shadow: 0px -8px 10px #ddd;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.step-3 > div .paper::before {
+  content: "";
+  position: absolute;
+  width: 8rem;
+  height: 8rem;
+  background: -webkit-gradient(linear, left top, left bottom, from(#4865f4), to(#5671f5));
+  background: linear-gradient(to bottom, #4865f4, #5671f5);
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.step-3 > div .scissors::before {
+  content: "";
+  position: absolute;
+  width: 8rem;
+  height: 8rem;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ec9e0e), to(#eca922));
+  background: linear-gradient(to bottom, #ec9e0e, #eca922);
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.step-3 > div .rock::before {
+  content: "";
+  position: absolute;
+  width: 8rem;
+  height: 8rem;
+  background: -webkit-gradient(linear, left top, left bottom, from(#dc2e4e), to(#dd405d));
+  background: linear-gradient(to bottom, #dc2e4e, #dd405d);
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.step-4 {
+  width: 305px;
+  height: 277px;
+  margin-inline: auto;
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.step-4 > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2rem;
+}
+
+.step-4 > div > .option {
+  width: 6rem;
+  height: 6rem;
+  position: static;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0px -8px 10px #ddd;
+          box-shadow: 0px -8px 10px #ddd;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.step-4 > div .paper::before {
+  content: "";
+  position: absolute;
+  width: 8rem;
+  height: 8rem;
+  background: -webkit-gradient(linear, left top, left bottom, from(#4865f4), to(#5671f5));
+  background: linear-gradient(to bottom, #4865f4, #5671f5);
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.step-4 > div .scissors::before {
+  content: "";
+  position: absolute;
+  width: 8rem;
+  height: 8rem;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ec9e0e), to(#eca922));
+  background: linear-gradient(to bottom, #ec9e0e, #eca922);
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.step-4 > div .rock::before {
+  content: "";
+  position: absolute;
+  width: 8rem;
+  height: 8rem;
+  background: -webkit-gradient(linear, left top, left bottom, from(#dc2e4e), to(#dd405d));
+  background: linear-gradient(to bottom, #dc2e4e, #dd405d);
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.step-4 .you::after {
+  content: "";
+  display: block;
+  width: 12rem;
+  height: 12rem;
+  position: absolute;
+  border-radius: 50%;
+  z-index: -2;
+  background-image: radial-gradient(circle, rgba(31, 55, 86, 0.5) 50%, rgba(238, 238, 238, 0.3) 80%, #dddddd 100%);
+}
+
+.result {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2rem;
+}
+
+.result .winLose {
+  font-size: 40px;
+  letter-spacing: 5px;
+}
+
+.result button {
+  width: 200px;
+  height: 50px;
+  border-radius: 10px;
+  border: #ffffff;
+  font-weight: 700;
+  font-size: 16px;
+  color: #3b4363;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+
+.result button:hover {
+  color: #dd405d;
+}
+
+.ruleContainer {
+  margin-block: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.ruleContainer .ruleBtn {
+  width: 100px;
+  height: 50px;
+  border-radius: 5px;
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.ruleContainer .rules {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #ffffff;
+  color: black;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  font-size: 36px;
+}
+
+.ruleContainer .rules img {
+  max-width: 100%;
+}
+
+.ruleContainer .rules .closeRules {
+  cursor: pointer;
+}
+/*# sourceMappingURL=styles.css.map */
