@@ -30,6 +30,9 @@ body {
 header {
   background: url("./images/bg-mobile-light.jpg") no-repeat center center;
   height: 200px;
+  @media all and (min-width: 376px) {
+    background: url("./images/bg-desktop-light.jpg") no-repeat center center;
+  }
   @include for-desktop() {
     background: url("./images/bg-desktop-light.jpg") no-repeat center center;
     height: 300px;
@@ -90,6 +93,7 @@ header {
         display: flex;
         align-items: center;
         justify-content: center;
+        cursor: pointer;
         @include for-desktop() {
           width: 50%;
           height: 50%;
@@ -173,6 +177,7 @@ header {
           display: flex;
           align-items: center;
           justify-content: center;
+          cursor: pointer;
           @include for-desktop() {
             width: 50%;
             height: 50%;
@@ -198,6 +203,7 @@ header {
         display: flex;
         justify-content: center;
         align-items: center;
+        cursor: pointer;
       }
     }
   }
@@ -213,6 +219,7 @@ header {
     gap: 1rem;
     font-size: 16px;
     color: map-get($colors, "Dark Grayish Blue");
+    cursor: pointer;
   }
   .active {
     color: hsl(220, 98%, 61%);
@@ -231,10 +238,15 @@ header {
   gap: 1rem;
   font-size: 16px;
   color: map-get($colors, "Dark Grayish Blue");
+  cursor: pointer;
   @include for-desktop() {
     display: none;
   }
   .active {
     color: hsl(220, 98%, 61%);
   }
+}
+
+.clearBtn {
+  cursor: pointer;
 }

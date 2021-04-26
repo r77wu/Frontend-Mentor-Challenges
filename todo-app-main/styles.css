@@ -19,6 +19,12 @@ header {
   height: 200px;
 }
 
+@media all and (min-width: 376px) {
+  header {
+    background: url("./images/bg-desktop-light.jpg") no-repeat center center;
+  }
+}
+
 @media all and (min-width: 1440px) {
   header {
     background: url("./images/bg-desktop-light.jpg") no-repeat center center;
@@ -123,6 +129,7 @@ header .searchArea .checkBox .checkCircle {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  cursor: pointer;
 }
 
 @media all and (min-width: 1440px) {
@@ -259,6 +266,7 @@ header .searchArea .inputBox .inputForm input {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  cursor: pointer;
 }
 
 @media all and (min-width: 1440px) {
@@ -304,6 +312,7 @@ header .searchArea .inputBox .inputForm input {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  cursor: pointer;
 }
 
 .desktopStatus {
@@ -325,6 +334,7 @@ header .searchArea .inputBox .inputForm input {
     gap: 1rem;
     font-size: 16px;
     color: #9394a5;
+    cursor: pointer;
   }
 }
 
@@ -350,6 +360,7 @@ header .searchArea .inputBox .inputForm input {
   gap: 1rem;
   font-size: 16px;
   color: #9394a5;
+  cursor: pointer;
 }
 
 @media all and (min-width: 1440px) {
@@ -360,5 +371,9 @@ header .searchArea .inputBox .inputForm input {
 
 .mobileStatus .active {
   color: #3a7bfd;
+}
+
+.clearBtn {
+  cursor: pointer;
 }
 /*# sourceMappingURL=styles.css.map */

@@ -160,7 +160,7 @@ class App {
     console.log(screen.width);
     this.#nightMode = !this.#nightMode;
     if (this.#nightMode) {
-      if (screen.width >= 1440) {
+      if (screen.width > 375) {
         header.style.background =
           'url("./images/bg-desktop-dark.jpg") no-repeat center center';
       } else {
@@ -177,7 +177,7 @@ class App {
       desktopStatus.style.backgroundColor = "hsl(235, 24%, 19%)";
       mobileStatus.style.backgroundColor = "hsl(235, 24%, 19%)";
     } else {
-      if (screen.width >= 1440) {
+      if (screen.width > 375) {
         header.style.background =
           'url("./images/bg-desktop-light.jpg") no-repeat center center';
       } else {
