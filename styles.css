@@ -34,6 +34,7 @@ body {
 
 .challenges {
   width: 80%;
+  margin-block: 2rem;
   margin-inline: auto;
   display: flex;
   flex-wrap: wrap;
