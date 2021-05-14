@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" type="text/css" href="./styles.css" />
+    <script src="./app.js" defer></script>
+
+    <title>Frontend Mentor | Bookmark landing page</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="navContainer">
+        <div class="logoContainer">
+          <img src="./images/logo-bookmark.svg" alt="logo" />
+        </div>
+        <div class="hamburger">
+          <img src="./images/icon-hamburger.svg" alt="hamburger" />
+        </div>
+        <div class="desktopMenu">
+          <div class="menuItems">
+            <div>Features</div>
+            <div>Pricing</div>
+            <div>Contact</div>
+          </div>
+          <button class="loginBtn">Login</button>
+        </div>
+      </div>
+      <div class="headerContentContainer">
+        <div class="headerImg">
+          <img src="./images/illustration-hero.svg" />
+        </div>
+        <div class="headerIntro">
+          <div class="headerContent">
+            <h1>A Simple Bookmark Manager</h1>
+            <p>
+              A clean and simple interface to organize your favourite websites.
+              Open a new browser tab and see your sites load instantly. Try it
+              for free.
+            </p>
+          </div>
+
+          <div class="headerBtnContainer">
+            <a href="#" class="chromeBtn">Get it on Chrome</a>
+            <a href="#" class="fireFoxBtn">Get it on Firefox</a>
+          </div>
+        </div>
+      </div>
+      <div class="menu">
+        <div class="navContainer">
+          <div class="logoContainer">
+            <img src="./images/logo-bookmark.svg" alt="logo" />
+          </div>
+          <div class="hamburger">
+            <img src="./images/icon-close.svg" alt="close" />
+          </div>
+        </div>
+        <div class="menuItems">
+          <div>Features</div>
+          <div>Pricing</div>
+          <div>Contact</div>
+        </div>
+        <button class="loginBtn">Login</button>
+        <div class="MenuMedia">
+          <div><img src="./images/icon-facebook.svg" alt="facebook" /></div>
+          <div><img src="./images/icon-twitter.svg" alt="twitter" /></div>
+        </div>
+      </div>
+    </header>
+    <section class="features">
+      <div class="featuresIntro">
+        <h1>Features</h1>
+        <p>
+          Our aim is to make it quick and easy for you to access your favourite
+          websites. Your bookmarks sync between your devices so you can access
+          them on the go.
+        </p>
+      </div>
+      <div class="featuresDetails">
+        <div class="featuresSwitch">
+          <div class="featuresName item-1 active">Simple Bookmarking</div>
+          <div class="featuresName item-2">Speedy Searching</div>
+          <div class="featuresName item-3">Easy Sharing</div>
+        </div>
+        <div class="featuresDetail">
+          <div class="featuresImg">
+            <img src="./images/illustration-features-tab-1.svg" alt="feature" />
+          </div>
+          <div class="featuresDetailIntro">
+            <h1>Bookmark in one click</h1>
+            <p>
+              Organize your bookmarks however you like. Our simple drag-and-drop
+              interface gives you complete control over how you manage your
+              favourite sites.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="extensions">
+      <div class="extensionsIntro">
+        <h1>Download the extension</h1>
+        <p>
+          We’ve got more browsers in the pipeline. Please do let us know if
+          you’ve got a favourite you’d like us to prioritize.
+        </p>
+      </div>
+      <div class="cardsContainer">
+        <div class="card">
+          <div class="Icon">
+            <img src="./images/logo-chrome.svg" alt="chrome" />
+          </div>
+          <div class="cardInfo">
+            <h3>Add to Chrome</h3>
+            <p>Minimum version 62</p>
+          </div>
+          <div class="divider"></div>
+          <div class="installBtn">
+            <a>Add & install Extension</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="Icon">
+            <img src="./images/logo-firefox.svg" alt="Firefox" />
+          </div>
+          <div class="cardInfo">
+            <h3>Add to Firefox</h3>
+            <p>Minimum version 55</p>
+          </div>
+          <div class="divider"></div>
+          <div class="installBtn">
+            <a>Add & install Extension</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="Icon">
+            <img src="./images/logo-opera.svg" alt="Opera" />
+          </div>
+          <div class="cardInfo">
+            <h3>Add to Opera</h3>
+            <p>Minimum version 46</p>
+          </div>
+          <div class="divider"></div>
+          <div class="installBtn">
+            <a href="#">Add & install Extension</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="QandA">
+      <div class="QandAInfo">
+        <h1>Frequently Asked Questions</h1>
+        <p>
+          Here are some of our FAQs. If you have any other questions you’d like
+          answered please feel free to email us.
+        </p>
+      </div>
+      <div class="QandAQuestions">
+        <div class="quetionContainer">
+          <div class="question">
+            <div>What is Bookmark?</div>
+            <div><img src="./images/icon-arrow.svg" alt="arrow" /></div>
+          </div>
+          <div class="ans">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+              tincidunt justo eget ultricies fringilla. Phasellus blandit ipsum
+              quis quam ornare mattis.
+            </p>
+          </div>
+        </div>
+        <div class="quetionContainer">
+          <div class="question">
+            <div>How can I request a new browser?</div>
+            <div><img src="./images/icon-arrow.svg" alt="arrow" /></div>
+          </div>
+          <div class="ans">
+            <p>
+              Vivamus luctus eros aliquet convallis ultricies. Mauris augue
+              massa, ultricies non ligula. Suspendisse imperdiet. Vivamus luctus
+              eros aliquet convallis ultricies. Mauris augue massa, ultricies
+              non ligula. Suspendisse imperdie tVivamus luctus eros aliquet
+              convallis ultricies. Mauris augue massa, ultricies non ligula.
+              Suspendisse imperdiet.
+            </p>
+          </div>
+        </div>
+        <div class="quetionContainer">
+          <div class="question">
+            <div>Is there a mobile app?</div>
+            <div><img src="./images/icon-arrow.svg" alt="arrow" /></div>
+          </div>
+          <div class="ans">
+            <p>
+              Sed consectetur quam id neque fermentum accumsan. Praesent luctus
+              vestibulum dolor, ut condimentum urna vulputate eget. Cras in
+              ligula quis est pharetra mattis sit amet pharetra purus. Sed
+              sollicitudin ex et ultricies bibendum.
+            </p>
+          </div>
+        </div>
+        <div class="quetionContainer">
+          <div class="question">
+            <div>What about other Chromium browsers?</div>
+            <div><img src="./images/icon-arrow.svg" alt="arrow" /></div>
+          </div>
+          <div class="ans">
+            <p>
+              Integer condimentum ipsum id imperdiet finibus. Vivamus in
+              placerat mi, at euismod dui. Aliquam vitae neque eget nisl gravida
+              pellentesque non ut velit. More Info 35,000+ already joined Stay
+              up-to-date with what we’re doing Contact Us Features Pricing
+              Contact
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="moreInfo">
+        <a href="#">More Info</a>
+      </div>
+    </section>
+    <section class="contact">
+      <p>35,000+ already joined</p>
+      <h3>Stay up-to-date with what we’re doing</h3>
+      <form>
+        <input type="text" placeholder="Enter your email address" />
+        <button type="submit">Contact Us</button>
+      </form>
+    </section>
+    <section class="footer">
+      <div class="logo">
+        <img src="./images/logo-bookmark.svg" alt="logo" />
+      </div>
+      <div class="footerMenu">
+        <div>Features</div>
+        <div>Pricing</div>
+        <div>Contact</div>
+      </div>
+      <div class="media">
+        <div><img src="./images/icon-facebook.svg" alt="facebook" /></div>
+        <div><img src="./images/icon-twitter.svg" alt="twitter" /></div>
+      </div>
+    </section>
+
+    <footer>
+      <p class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Ricky</a>.
+      </p>
+    </footer>
+  </body>
+</html>
